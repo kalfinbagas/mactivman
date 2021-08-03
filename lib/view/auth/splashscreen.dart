@@ -2,8 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import 'package:macman/home.dart';
-import 'package:macman/loginpage.dart';
+import 'package:macman/view/auth/loginpage.dart';
 
 class SplashScreen extends StatefulWidget {
   _SplashScreen createState() => _SplashScreen();
@@ -18,12 +17,14 @@ class _SplashScreen extends State<SplashScreen> {
   splashscreenStart() async {
     var duration = const Duration(seconds: 3);
     return Timer(duration, () {
-      Navigator.push(
+      Navigator.pushReplacementNamed(
         context,
-        MaterialPageRoute(builder: (context) => LoginPage()),
+        '/loginpage',
       );
     });
   }
+
+  /************* BIG LOGO **********/
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +48,7 @@ class _SplashScreen extends State<SplashScreen> {
             Image.asset(
               'img/biglogo.png',
               width: 200.0,
-              height: 100.0,
+              height: 200.0,
             ),
           ],
         ),
@@ -55,3 +56,4 @@ class _SplashScreen extends State<SplashScreen> {
     );
   }
 }
+/************* END OF BIG LOGO **********/
