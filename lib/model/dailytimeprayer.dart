@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class DailyPrayerTime {
   String date, shubuh, shuruq, dzuhur, ashar, maghrib, isya;
 
